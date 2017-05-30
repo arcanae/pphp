@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        input,
+        select {
+            width: 150px;
+        }
+    </style>
+    <form action="about.php" method="POST">
+        <label for="lastname">Last Name : </label>
+        <input type="text" name="lastname">
+        <label for="firstname">First Name :</label>
+        <input type="text" name="firstname">
+        <label for="age">Age :</label>
+        <input type="number" min="0" max="130" name="age">
+        <label for="country">Country :</label>
+        <select name="country">
+            <option value="France">France</option>
+            <option value="Germany">Germany</option>
+            <option value="England">England</option>
+            <option value="Italia">Italia</option>
+            <option value="Spain">Spain</option>
+        </select>
+        <p>Choose one :
+            <input type="radio" name="animal" value="Cats">
+            <label for="Cats">Cats</label>
+            <input type="radio" name="animal" value="Dogs">
+            <label for="Dogs">Dogs</label>
+        </p>
+        <button>Submit</button>
+    </form>
+</body>
+
+</html>
