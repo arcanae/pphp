@@ -7,6 +7,13 @@
     <title>Document</title>
 </head>
 <body>
+    <style>
+        td {
+            border : 1px solid black;
+        }
+
+    </style>
+
     <table>
     <?php
     $x=1;
