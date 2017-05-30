@@ -10,6 +10,10 @@
 <?php
 $name = "justin";
   echo "<p>".$name."</p>";
+
+  for ($i = 1; $i <=10; $i++){
+      echo "<p>".$i."</p>";
+  }
 ?>
 </body>
 </html>
