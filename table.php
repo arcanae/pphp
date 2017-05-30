@@ -12,15 +12,15 @@
     $x=1;
     function tr($x) {
         for ($j = 1; $j <= 10; $j++) {
-                echo '<td>'.$x.'</td>';                
+            echo '<td>'.$x.'</td>';                
             $x++;
         }
-}
+    }
     
     for ($i = 1; $i <= 10; $i++) {
-    echo   "<tr>".tr($x)."</tr>";
-    $x += 10;
-        }
+        echo   "<tr>".tr($x)."</tr>";
+        $x += 10;
+    }
 
     ?>
     </table>
