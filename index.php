@@ -7,6 +7,22 @@
     <title>Document</title>
 </head>
 <body>
+
+    <style>
+        form {
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+
+    <form action="blogPHP/create-file.php" method="POST">
+
+        <input type="text" name="title" placeholder="Title">
+        <textarea name="text"></textarea>
+        <button>Submit</button>
+    </form>
+
     <h1 style="text-align: center">MY POSTS</h1>
 
     <?php

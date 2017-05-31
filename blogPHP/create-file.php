@@ -14,6 +14,11 @@ $open;
 fwrite($open, $title."\n \n".$text);
 fclose($open);
 
-echo "You've create ".$title.".txt with the text :</br></br>".$text;
+// echo "You've create ".$title.".txt with the text :</br></br>".$text;
+
 
 ?>
+
+<script>
+    location.href = "../index.php";
+</script>
