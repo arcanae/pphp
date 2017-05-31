@@ -3,10 +3,16 @@
 $title = $_POST['title'];
 $text = $_POST['text'];
 
+if (file_exists('BlogFolder')) {}
+else {
+    mkdir("BlogFolder");
+}
 
-$open = fopen($title.".txt", "a");
+
+$open = fopen("BlogFolder/".$title.".txt", "a");
 $open;
-fwrite($open, $text);
+fwrite($open, $title."\n \n".$text);
+fclose($open);
 
 echo "You've create ".$title.".txt with the text :</br></br>".$text;
 
