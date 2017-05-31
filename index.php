@@ -9,21 +9,39 @@
 <body>
 
     <style>
+        *{
+            color:white;
+        }
+
+        input,textarea {
+            margin-bottom: 1em;
+        }
+
+        body {
+            background: url("../stripe.jpg");
+        }
+
         form {
             width: 20%;
             display: flex;
             flex-direction: column;
         }
+
+        button {
+            color: black;
+        }
     </style>
+
+    <h2>Create an element</h2>
 
     <form action="blogPHP/create-file.php" method="POST">
 
         <input type="text" name="title" placeholder="Title">
-        <textarea name="text"></textarea>
+        <textarea name="text" placeholder="Content"></textarea>
         <button>Submit</button>
     </form>
 
-    <h1 style="text-align: center">MY POSTS</h1>
+    <h2>MY POSTS</h1>
 
     <?php
         $open = scandir("blogPHP/BlogFolder");
