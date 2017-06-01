@@ -51,6 +51,7 @@
 
        main>form {
            width: 66%;
+           border: 0.1vh solid white;
        }
 
        main>form>button {
@@ -81,8 +82,9 @@
 
         
             echo "<form action='blogPHP/delete.php' method='GET'>";
-            $handle = fopen("blogPHP/BlogFolder/".$value, "r");
+            echo "<input type='hidden' name='filename' value='".$value."'>";
             echo '<textarea class="area">';
+            $handle = fopen("blogPHP/BlogFolder/".$value, "r");
             echo fread($handle, filesize("blogPHP/BlogFolder/".$value));
             echo "</textarea>";
             echo "<button>Delete</button>";
