@@ -55,11 +55,16 @@
            border: 0.1vh solid white;
        }
 
-       main>form>button {
+       main>form>div>input {
            width: 20%;
            align-self: center;
+           margin-right: 1em;
        }
 
+       div {
+           display: flex;
+           justify-content: center;
+       }
     </style>
 
     <h2>Create an element</h2>
@@ -88,7 +93,10 @@
             $handle = fopen("blogPHP/BlogFolder/".$value, "r");
             echo fread($handle, filesize("blogPHP/BlogFolder/".$value));
             echo "</textarea>";
-            echo "<button>Delete</button>";
+            echo "<div>";
+            echo "<input type='submit' name='action' value='Delete'>";
+            echo "<input type='submit' name='action' value='Edit'>";
+            echo "</div>";
             echo "</form>";
             }
         }
