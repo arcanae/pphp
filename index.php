@@ -31,11 +31,12 @@
         .area {
             color: white;
             height: 8em; 
-            width: 100%; 
+            width: 95%; 
             background: transparent;
             border: none;
             resize: none;
             text-align: center;
+            align-self: center;
         }
 
         button {
