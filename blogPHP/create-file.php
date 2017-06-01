@@ -11,7 +11,7 @@ else {
 
 $open = fopen("BlogFolder/".$title.".txt", "a");
 $open;
-fwrite($open, $title.".txt\n \n".$text);
+fwrite($open, $title."\n \n".$text);
 fclose($open);
 
 // echo "You've create ".$title.".txt with the text :</br></br>".$text;
