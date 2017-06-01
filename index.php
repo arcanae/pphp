@@ -15,6 +15,7 @@
 
         input,textarea {
             margin-bottom: 1em;
+            color: black;
         }
 
         body {
@@ -27,9 +28,36 @@
             flex-direction: column;
         }
 
+        .area {
+            color: white;
+            height: 8em; 
+            width: 100%; 
+            background: transparent;
+            border: none;
+            resize: none;
+            text-align: center;
+        }
+
         button {
             color: black;
+            margin-bottom: 1em;
         }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+       main>form {
+           width: 66%;
+       }
+
+       main>form>button {
+           width: 20%;
+           align-self: center;
+       }
+
     </style>
 
     <h2>Create an element</h2>
@@ -40,7 +68,7 @@
         <textarea name="text" placeholder="Content"></textarea>
         <button>Submit</button>
     </form>
-
+<main>
     <h2>MY POSTS</h1>
 
     <?php
@@ -49,10 +77,20 @@
         foreach($open as $key => $value) {
             if ($key === 0 OR $key === 1) {}
             else {
-            echo "<a href=blogPHP/BlogFolder/".$value.">".$value."</a>"."</br>";
+            //echo "<a href=blogPHP/BlogFolder/".$value.">".$value."</a>"."</br>"
+
+        
+            echo "<form action='blogPHP/delete.php' method='GET'>";
+            $handle = fopen("blogPHP/BlogFolder/".$value, "r");
+            echo '<textarea class="area">';
+            echo fread($handle, filesize("blogPHP/BlogFolder/".$value));
+            echo "</textarea>";
+            echo "<button>Delete</button>";
+            echo "</form>";
             }
         }
 
     ?>
+    </main>
 </body>
 </html>
