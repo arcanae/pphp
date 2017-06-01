@@ -30,11 +30,8 @@
 
         .area {
             color: white;
-            height: 8em; 
+            height: 80%; 
             width: 95%; 
-            background: transparent;
-            border: none;
-            resize: none;
             text-align: center;
             align-self: center;
         }
@@ -50,14 +47,15 @@
             align-items: center;
         }
 
-       main>form {
-           width: 66%;
+        main>article{
            border: 0.1vh solid white;
-       }
+           width: 66%;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+        }
 
-       main>form>div>input {
-           width: 20%;
-           align-self: center;
+       main>article>form>div>input {
            margin-right: 1em;
        }
 
@@ -86,18 +84,22 @@
             else {
             //echo "<a href=blogPHP/BlogFolder/".$value.">".$value."</a>"."</br>"
 
-        
+            echo '<article>';
+            echo '<p class="area">';
+            $handle = fopen("blogPHP/BlogFolder/".$value, "r");
+            $read = fread($handle, filesize("blogPHP/BlogFolder/".$value));
+            $read = htmlspecialchars($read);
+            $read = str_replace("\n", "</br>", $read);
+            echo $read;
+            echo "</p>";
             echo "<form action='blogPHP/delete.php' method='GET'>";
             echo "<input type='hidden' name='filename' value='".$value."'>";
-            echo '<textarea class="area">';
-            $handle = fopen("blogPHP/BlogFolder/".$value, "r");
-            echo fread($handle, filesize("blogPHP/BlogFolder/".$value));
-            echo "</textarea>";
             echo "<div>";
             echo "<input type='submit' name='action' value='Delete'>";
             echo "<input type='submit' name='action' value='Edit'>";
             echo "</div>";
             echo "</form>";
+            echo '</article>';
             }
         }
 
