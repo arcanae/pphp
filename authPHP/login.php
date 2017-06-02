@@ -19,16 +19,26 @@
         color: black;
     }
 
+    pre {
+        font-size: 0.8em;
+    }
+
     button {
         color: black;
         width: 32%;
+        margin-top: 0.5em;
     }
 
     fieldset {
+        padding: 0;
         width: 35%;
         border: none;
         display: flex;
         flex-direction: column;
+    }
+
+    .marg {
+        margin-bottom: 0.7em;
     }
 
     section {
@@ -60,14 +70,15 @@
     <form action="auth.php" method="POST">
         <fieldset>
         <label for="user">Username:</label>
-        <input type="text" name="user" placeholder="Username">
+        <input class='marg' type="text" name="user" placeholder="Username">
         </fieldset>
         <fieldset>
         <label for="pass">Password:</label>
         <input type="password" name="pass">
         </fieldset>
         <fieldset>
-        <button>Sign In</button>
+        <pre><a href="sign_up.php">Create an account</a></pre>
+        <button class='marg'>Sign In</button>
         </fieldset>
     </form>
     </section>
