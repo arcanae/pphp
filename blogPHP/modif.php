@@ -8,7 +8,7 @@ if ($todo === "Modify") {
 
 unlink("BlogFolder/".$tosupr);
 
-$open = fopen("BlogFolder/".$title, "a");
+$open = fopen("BlogFolder/".$title.".txt", "a");
 $open;
 fwrite($open,$text);
 fclose($open);

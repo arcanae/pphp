@@ -73,7 +73,7 @@ echo "</script>";
 if ($todo === 'Edit') {
     echo  '<form action="modif.php" method="POST">';
     echo "<input type='hidden' name='filename' value='".$tosupr."'>";
-    echo  '<input type="text" name="title" value="'.$tosupr.'" placeholder="Title">';
+    echo  '<input type="text" name="title" value="'.str_replace(".txt","",$tosupr).'" placeholder="Title">';
     echo  '<textarea name="text">'.$content.'</textarea>';
     echo "<div>";
     echo "<input type='submit' name='action' value='Cancel'>";
