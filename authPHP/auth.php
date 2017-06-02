@@ -4,6 +4,7 @@
      $user = $_POST['user'];
      $user = str_replace(" ", "", $user);
      $pass = $_POST['pass'];
+     $pass = md5($pass);
      $wrong = false;
      $wrong2 = false; 
      foreach ($data as $key => $value) {

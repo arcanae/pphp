@@ -29,6 +29,10 @@
             justify-content: center;
         }
 
+        input {
+            color: black;
+        }
+
         button {
             color: black;
             width: 32%;
@@ -41,6 +45,10 @@
             border: none;
             display: flex;
             flex-direction: column;
+        }
+
+        .marg {
+            margin-bottom: 0.7em;
         }
     </style>
 

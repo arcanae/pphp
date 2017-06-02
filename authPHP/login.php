@@ -84,7 +84,6 @@
     </section>
 
     <main>
-        <h2>Actual Users / Passwords</h2>
         <?php
 
         $source = file_get_contents("auth.json");
@@ -93,7 +92,6 @@
         foreach ($data as $key => $value) {
         $ver_user = htmlspecialchars($data[$key]->user);
         $ver_pass = htmlspecialchars($data[$key]->password);
-        echo "<p>".$ver_user." / ".$ver_pass."</p>";
         }
 
         ?>
