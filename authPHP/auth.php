@@ -4,26 +4,27 @@
      $user = $_POST['user'];
      $user = str_replace(" ", "", $user);
      $pass = $_POST['pass'];
-
+     $wrong = false;
+     $wrong2 = false; 
      foreach ($data as $key => $value) {
-     $ver_user = htmlspecialchars($data[$key]->user);
-     $ver_pass = htmlspecialchars($data[$key]->password);
+        $ver_user = htmlspecialchars($data[$key]->user);
+        $ver_pass = htmlspecialchars($data[$key]->password);
         if (strtolower($user) === $ver_user) {
+            $wrong2 = true;
 
-         if ($pass !== $ver_pass) {
-             echo "wrong password";
-         }
+            if ($pass !== $ver_pass) {
+                echo "wrong password";
+            }
 
-         if ($pass === $ver_pass) {
-         echo "ok";
-         }
-         
-         if (strtolower($user) !== $ver_user) {
-          echo "User doesn't exist";
-         }
+            if ($pass === $ver_pass) {
+                echo "ok";
+            }    
+        } else {
+                $wrong = true;    
         }
-        
-
      }
 
+     if ($wrong === true && $wrong2 === false) {
+          echo "User doesn't exist";
+     }
 ?>

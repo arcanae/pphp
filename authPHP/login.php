@@ -8,12 +8,69 @@
     <title>Document</title>
 </head>
 
+
+<style>
+
+    * {
+        color: white;
+    }
+
+    input {
+        color: black;
+    }
+
+    button {
+        color: black;
+        width: 32%;
+    }
+
+    fieldset {
+        width: 35%;
+        border: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    section {
+        display: flex;
+        width: 100%;
+        height: 33vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    form {
+        border: 3px solid white;
+        width: 66%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    body {
+        background: url("../stripe.jpg");
+        height: 100vh;
+    }
+
+</style>
+
 <body>
+    <section>
     <form action="auth.php" method="POST">
+        <fieldset>
+        <label for="user">Username:</label>
         <input type="text" name="user" placeholder="Username">
+        </fieldset>
+        <fieldset>
+        <label for="pass">Password:</label>
         <input type="password" name="pass">
-        <input type="submit" value="Sign In">
+        </fieldset>
+        <fieldset>
+        <button>Sign In</button>
+        </fieldset>
     </form>
+    </section>
 
     <main>
         <h2>Actual Users / Passwords</h2>
