@@ -18,7 +18,9 @@
             }
 
             if ($pass === $ver_pass) {
-                echo "ok";
+                echo "<script>";
+                echo "location.href = \"../blogPHP/adminindex.php\"";
+                echo "</script>";
             }    
         } else {
                 $wrong = true;    

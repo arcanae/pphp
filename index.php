@@ -13,6 +13,10 @@
             color:white;
         }
 
+        a {
+            align-self: flex-end;
+        }
+
         input,textarea {
             margin-bottom: 1em;
             color: black;
@@ -65,6 +69,7 @@
        }
     </style>
 <main>
+    <a href="admin.php">Admin</a>
     <h2>Arcanae's blog</h1>
 
     <?php

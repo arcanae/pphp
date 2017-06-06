@@ -19,7 +19,7 @@
         }
 
         body {
-            background: url("stripe.jpg");
+            background: url("../stripe.jpg");
         }
 
         form {
@@ -77,7 +77,7 @@
     <h2>MY POSTS</h1>
 
     <?php
-        $open = scandir("blogPHP/BlogFolder");
+        $open = scandir("BlogFolder");
         
         foreach($open as $key => $value) {
             if ($key === 0 OR $key === 1) {}
@@ -86,8 +86,8 @@
 
             echo '<article>';
             echo '<p class="area">';
-            $handle = fopen("blogPHP/BlogFolder/".$value, "r");
-            $read = fread($handle, filesize("blogPHP/BlogFolder/".$value));
+            $handle = fopen("BlogFolder/".$value, "r");
+            $read = fread($handle, filesize("BlogFolder/".$value));
             $read = htmlspecialchars($read);
             $read = str_replace("\n", "</br>", $read);
             echo $read;
