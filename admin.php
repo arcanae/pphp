@@ -67,7 +67,7 @@
 
 <body>
     <section>
-    <form action="auth.php" method="POST">
+    <form action="" method="POST">
         <fieldset>
         <label for="user">Username:</label>
         <input class='marg' type="text" name="user" placeholder="Username">
@@ -77,7 +77,6 @@
         <input type="password" name="pass">
         </fieldset>
         <fieldset>
-        <pre><a href="sign_up.php">Create an account</a></pre>
         <button class='marg'>Sign In</button>
         </fieldset>
     </form>

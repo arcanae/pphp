@@ -64,8 +64,17 @@
            justify-content: center;
        }
     </style>
+
+    <h2>Create an element</h2>
+
+    <form action="blogPHP/create-file.php" method="POST">
+
+        <input type="text" name="title" placeholder="Title">
+        <textarea name="text" placeholder="Content"></textarea>
+        <button>Submit</button>
+    </form>
 <main>
-    <h2>Arcanae's blog</h1>
+    <h2>MY POSTS</h1>
 
     <?php
         $open = scandir("blogPHP/BlogFolder");
@@ -83,6 +92,13 @@
             $read = str_replace("\n", "</br>", $read);
             echo $read;
             echo "</p>";
+            echo "<form action='blogPHP/delete.php' method='GET'>";
+            echo "<input type='hidden' name='filename' value='".$value."'>";
+            echo "<div>";
+            echo "<input type='submit' name='action' value='Delete'>";
+            echo "<input type='submit' name='action' value='Edit'>";
+            echo "</div>";
+            echo "</form>";
             echo '</article>';
             }
         }
