@@ -7,10 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-
     <style>
         *{
             color:white;
+        }
+
+        a {
+            align-self: flex-end;
         }
 
         input,textarea {
@@ -19,7 +22,7 @@
         }
 
         body {
-            background: url("../stripe.jpg");
+            background: url("stripe.jpg");
         }
 
         form {
@@ -64,19 +67,12 @@
            justify-content: center;
        }
     </style>
-    <h2>Create an element</h2>
-
-    <form action="blogPHP/create-file.php" method="POST">
-
-        <input type="text" name="title" placeholder="Title">
-        <textarea name="text" placeholder="Content"></textarea>
-        <button>Submit</button>
-    </form>
 <main>
-    <h2>MY POSTS</h1>
+    <a href="admin.php">Admin</a>
+    <h2>Arcanae's blog</h1>
 
     <?php
-        $open = scandir("BlogFolder");
+        $open = scandir("blogPHP/BlogFolder");
         
         foreach($open as $key => $value) {
             if ($key === 0 OR $key === 1) {}
@@ -85,19 +81,12 @@
 
             echo '<article>';
             echo '<p class="area">';
-            $handle = fopen("BlogFolder/".$value, "r");
-            $read = fread($handle, filesize("BlogFolder/".$value));
+            $handle = fopen("blogPHP/BlogFolder/".$value, "r");
+            $read = fread($handle, filesize("blogPHP/BlogFolder/".$value));
             $read = htmlspecialchars($read);
             $read = str_replace("\n", "</br>", $read);
             echo $read;
             echo "</p>";
-            echo "<form action='blogPHP/delete.php' method='GET'>";
-            echo "<input type='hidden' name='filename' value='".$value."'>";
-            echo "<div>";
-            echo "<input type='submit' name='action' value='Delete'>";
-            echo "<input type='submit' name='action' value='Edit'>";
-            echo "</div>";
-            echo "</form>";
             echo '</article>';
             }
         }

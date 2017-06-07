@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 
-
+<body>
 <style>
 
     * {
@@ -65,9 +65,8 @@
 
 </style>
 
-<body>
     <section>
-    <form action="authPHP/auth.php" method="POST">
+    <form action="../authPHP/auth.php" method="POST">
         <fieldset>
         <label for="user">Username:</label>
         <input class='marg' type="text" name="user" placeholder="Username">

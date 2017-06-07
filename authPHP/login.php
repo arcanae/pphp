@@ -1,31 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-
-
 <style>
-
-    * {
-        color: white;
-    }
-
-    input {
-        color: black;
-    }
 
     pre {
         font-size: 0.8em;
     }
 
-    button {
+    #but1 {
         color: black;
-        width: 32%;
         margin-top: 0.5em;
     }
 
@@ -38,36 +18,29 @@
     }
 
     .marg {
+        color: black;
         margin-bottom: 0.7em;
     }
 
-    section {
+    #logincont {
         display: flex;
         width: 100%;
         height: 33vh;
-        align-items: center;
-        justify-content: center;
+        justify-content: flex-end;
     }
 
-    form {
+    #login {
+        color: white;
         border: 3px solid white;
-        width: 66%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items:center;
         justify-content: center;
-    }
-
-    body {
-        background: url("../stripe.jpg");
-        height: 100vh;
     }
 
 </style>
-
-<body>
-    <section>
-    <form action="auth.php" method="POST">
+    <section id="logincont">
+    <form id="login" action="auth.php" method="POST">
         <fieldset>
         <label for="user">Username:</label>
         <input class='marg' type="text" name="user" placeholder="Username">
@@ -78,10 +51,7 @@
         </fieldset>
         <fieldset>
         <pre><a href="sign_up.php">Create an account</a></pre>
-        <button class='marg'>Sign In</button>
+        <button id='but1' class='marg'>Sign In</button>
         </fieldset>
     </form>
     </section>
-</body>
-
-</html>
