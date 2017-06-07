@@ -18,8 +18,10 @@
             }
 
             if ($pass === $ver_pass) {
+                session_start();
+                $_SESSION['user'] = $user;
                 echo "<script>";
-                echo "location.href = \"../blogPHP/adminindex.php\"";
+                echo "location.href = \"../index.php\"";
                 echo "</script>";
             }    
         } else {

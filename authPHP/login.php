@@ -40,7 +40,7 @@
 
 </style>
     <section id="logincont">
-    <form id="login" action="auth.php" method="POST">
+    <form id="login" action="authPHP/auth.php" method="POST">
         <fieldset>
         <label for="user">Username:</label>
         <input class='marg' type="text" name="user" placeholder="Username">
@@ -50,7 +50,7 @@
         <input type="password" name="pass">
         </fieldset>
         <fieldset>
-        <pre><a href="sign_up.php">Create an account</a></pre>
+        <pre><a href="authPHP/sign_up.php">Create an account</a></pre>
         <button id='but1' class='marg'>Sign In</button>
         </fieldset>
     </form>

@@ -36,6 +36,12 @@
             align-self: center;
         }
 
+        #logout {
+            width: 40%;
+            margin: 0;
+            margin-top: 0.5em;
+        }
+
         button {
             color: black;
             margin-bottom: 1em;
@@ -64,16 +70,29 @@
            justify-content: center;
        }
     </style>
- <?php include("authPHP/login.php"); ?>
+ <?php 
+ session_start();
+ if (isset($_SESSION['user'])) {
+    echo "Welcome ".$_SESSION['user'].".";
+    echo "<form action=\"authPHP/logout.php\" method=\"POST\">";
+    echo "<input id=\"logout\" type=\"submit\" name=\"logout\" value=\"Log Out\">";
+    echo "</form>";
+ } else {
+    include("authPHP/login.php"); 
+ }
+ ?>
+<?php
+if (isset($_SESSION['user'])) {
+   echo '<h2>Create an element</h2>';
 
-    <h2>Create an element</h2>
+   echo '<form action="blogPHP/create-file.php" method="POST">';
 
-    <form action="blogPHP/create-file.php" method="POST">
-
-        <input type="text" name="title" placeholder="Title">
-        <textarea name="text" placeholder="Content"></textarea>
-        <button>Submit</button>
-    </form>
+   echo '    <input type="text" name="title" placeholder="Title">';
+   echo '    <textarea name="text" placeholder="Content"></textarea>';
+   echo '    <button>Submit</button>';
+   echo '</form>';
+}    
+ ?>   
 <main>
     <h2>MY POSTS</h1>
 
@@ -96,8 +115,10 @@
             echo "<form action='blogPHP/delete.php' method='GET'>";
             echo "<input type='hidden' name='filename' value='".$value."'>";
             echo "<div>";
+            if (isset($_SESSION['user'])) {
             echo "<input type='submit' name='action' value='Delete'>";
             echo "<input type='submit' name='action' value='Edit'>";
+            }
             echo "</div>";
             echo "</form>";
             echo '</article>';

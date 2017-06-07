@@ -29,7 +29,11 @@
            $open = fopen("auth.json", "w") or die();
            fwrite($open, $encode);
            fclose($open);
-           echo "Account Created";
+           session_start();
+           $_SESSION['user'] = $user;
+           echo "<script>";
+           echo "location.href = \"../index.php\"";
+           echo "</script>";
         } 
      }
 ?>
