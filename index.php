@@ -94,8 +94,14 @@ if (isset($_SESSION['user'])) {
 }    
  ?>   
 <main>
-    <h2>MY POSTS</h1>
-
+<?php
+if (isset($_SESSION['user'])) {
+    echo "<h1>POSTS</h1>";
+}
+else {
+    echo "<h1>Arcanae's Blog</h1>";
+}
+?>
     <?php
         $open = scandir("blogPHP/BlogFolder");
         

@@ -1,0 +1,2 @@
+This is an exercice about PHP.
+Its a "blog" where you can log to edit or create files.
