@@ -19,7 +19,7 @@
 
             if ($pass === $ver_pass) {
                 session_start();
-                $_SESSION['user'] = $user;
+                $_SESSION['user'] = strtolower($user);
                 echo "<script>";
                 echo "location.href = \"../index.php\"";
                 echo "</script>";
