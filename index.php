@@ -122,7 +122,7 @@ else {
             echo "<form action='blogPHP/delete.php' method='GET'>";
             echo "<input type='hidden' name='filename' value='".$value."'>";
             echo "<div>";
-            if (isset($_SESSION['user'])) {
+            if (isset($_SESSION['user']) && $_SESSION['user'] == "Arcanae") {
             echo "<input type='submit' name='action' value='Delete'>";
             echo "<input type='submit' name='action' value='Edit'>";
             }
