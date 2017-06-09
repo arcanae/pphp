@@ -100,15 +100,14 @@ if (isset($_SESSION['user'])) {
     echo "<h1>POSTS</h1>";
 }
 else {
-    echo "<h1>Arcanae's Blog</h1>";
+    echo "<h1>Arcanae's Golden Book</h1>";
 }
+    echo '<p>Welcome\n \nHey! Take a bit of your time to log and leave me a message !</p>'; 
 ?>
     <?php
     if (file_exists('blogPHP/BlogFolder')) {
         $open = scandir("blogPHP/BlogFolder");
-        $open = usort($open, function($a, $b){
-        return filemtime($a) < filemtime($b);
-    });
+
         foreach($open  as $key => $value) {
             if ($key === 0 OR $key === 1) {}
             else {
