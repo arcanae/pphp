@@ -89,6 +89,7 @@ if (isset($_SESSION['user'])) {
 
    echo '    <input type="text" name="title" placeholder="Title">';
    echo '    <textarea name="text" placeholder="Content"></textarea>';
+   echo '    <input type="hidden" name="user" value="'.$_SESSION['user'].'">';
    echo '    <button>Submit</button>';
    echo '</form>';
 }    
