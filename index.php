@@ -69,6 +69,10 @@
            display: flex;
            justify-content: center;
        }
+
+       main>p {
+           text-align: center;
+       }
     </style>
  <?php 
  session_start();
