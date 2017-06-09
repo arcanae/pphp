@@ -1,0 +1,2 @@
+Voila un petit "blog", exercice en PHP, où vous pouvez vous connecter pour créer un post.
+Et moi le modifier/supprimer ! 

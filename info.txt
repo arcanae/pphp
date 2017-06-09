@@ -1,2 +1,3 @@
 This is an exercice about PHP.
-Its a "blog" where you can log to edit or create files.
+Its a "blog" where you can log create files.
+And then I can edit or modify them !
