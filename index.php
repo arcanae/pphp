@@ -19,7 +19,7 @@
         }
 
         body {
-            background: url("../stripe.jpg");
+            background: url("stripe.jpg");
         }
 
         form {
