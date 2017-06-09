@@ -106,8 +106,10 @@ else {
     <?php
     if (file_exists('blogPHP/BlogFolder')) {
         $open = scandir("blogPHP/BlogFolder");
-        
-        foreach($open as $key => $value) {
+        $open = usort($open, function($a, $b){
+        return filemtime($a) < filemtime($b);
+    });
+        foreach($open  as $key => $value) {
             if ($key === 0 OR $key === 1) {}
             else {
             //echo "<a href=blogPHP/BlogFolder/".$value.">".$value."</a>"."</br>"

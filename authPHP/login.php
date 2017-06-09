@@ -11,7 +11,7 @@
 
     fieldset {
         padding: 0;
-        width: 35%;
+        width: 50%;
         border: none;
         display: flex;
         flex-direction: column;
@@ -29,6 +29,10 @@
         justify-content: flex-end;
     }
 
+    .logininput {
+        width:100%;
+    }
+
     #login {
         color: white;
         border: 3px solid white;
@@ -43,11 +47,11 @@
     <form id="login" action="authPHP/auth.php" method="POST">
         <fieldset>
         <label for="user">Username:</label>
-        <input class='marg' type="text" name="user" placeholder="Username">
+        <input class='marg logininput' type="text" name="user" placeholder="Username">
         </fieldset>
         <fieldset>
         <label for="pass">Password:</label>
-        <input type="password" name="pass">
+        <input class="logininput" type="password" name="pass">
         </fieldset>
         <fieldset>
         <pre><a href="authPHP/sign_up.php">Create an account</a></pre>

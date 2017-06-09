@@ -1,3 +1,3 @@
 This is an exercice about PHP.
-Its a "blog" where you can log create files.
-And then I can edit or modify them !
+Its a "Golden Book" where you can log to create files.
+Let me a little message, I'll be happy to read it !
