@@ -102,7 +102,7 @@ if (isset($_SESSION['user'])) {
 else {
     echo "<h1>Arcanae's Golden Book</h1>";
 }
-    echo '<p>Welcome\n \nHey! Take a bit of your time to log and leave me a message !</p>'; 
+    echo '<p>Welcome</br></br>Hey! Take a bit of your time to log and leave me a message !</p>'; 
 ?>
     <?php
     if (file_exists('blogPHP/BlogFolder')) {
