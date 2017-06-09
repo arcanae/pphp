@@ -103,6 +103,7 @@ else {
 }
 ?>
     <?php
+    if (file_exists('blogPHP/BlogFolder')) {
         $open = scandir("blogPHP/BlogFolder");
         
         foreach($open as $key => $value) {
@@ -130,7 +131,7 @@ else {
             echo '</article>';
             }
         }
-
+    }
     ?>
     </main>
 </body>
